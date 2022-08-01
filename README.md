@@ -1,2 +1,2 @@
-# rockpi3a-yocto
-Yocto for Rock Pi 3A Development Board
+# rockpi3a
+Build yocto for Rock 3A Board
