@@ -15,5 +15,6 @@ BBLAYERS ?= " \
   ##OEROOT##/../meta-openembedded/meta-python \
   ##OEROOT##/../meta-openembedded/meta-multimedia \
   ##OEROOT##/../meta-radxa \
+  ##OEROOT##/../meta-python2 \
   ##OEROOT##/../meta-rockpi3 \
   "

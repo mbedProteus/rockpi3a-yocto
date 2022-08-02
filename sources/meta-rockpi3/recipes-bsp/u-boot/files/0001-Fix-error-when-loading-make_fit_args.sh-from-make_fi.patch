@@ -1,0 +1,24 @@
+From 4872f2123f1e68884ed4904eb788c9188d9d2b53 Mon Sep 17 00:00:00 2001
+From: Kien Le <kien.le@veriksystems.com>
+Date: Tue, 2 Aug 2022 14:06:14 +0700
+Subject: [PATCH] Fix error when loading make_fit_args.sh from make_fit_atf.sh
+
+---
+ arch/arm/mach-rockchip/make_fit_atf.sh | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/arch/arm/mach-rockchip/make_fit_atf.sh b/arch/arm/mach-rockchip/make_fit_atf.sh
+index 4f2780e67b..b86de46833 100755
+--- a/arch/arm/mach-rockchip/make_fit_atf.sh
++++ b/arch/arm/mach-rockchip/make_fit_atf.sh
+@@ -6,7 +6,7 @@
+ #
+
+ # Process args and auto set variables
+-source ./${srctree}/arch/arm/mach-rockchip/make_fit_args.sh
++source ${srctree}/arch/arm/mach-rockchip/make_fit_args.sh
+
+ rm -f ${srctree}/*.digest ${srctree}/*.bin.gz ${srctree}/bl31_0x*.bin
+ ${srctree}/arch/arm/mach-rockchip/decode_bl31.py
+--
+2.34.1

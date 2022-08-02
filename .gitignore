@@ -4,3 +4,4 @@ build/
 sources/meta-openembedded/
 sources/meta-radxa/
 sources/poky/
+sources/meta-python2/
