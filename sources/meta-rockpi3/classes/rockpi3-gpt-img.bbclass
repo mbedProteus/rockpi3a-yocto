@@ -153,7 +153,9 @@ EOF
 	if [ -e ${DEPLOY_DIR_IMAGE}/uEnv.txt ]; then
 		mcopy -i ${WORKDIR}/${BOOT_IMG} -s ${DEPLOY_DIR_IMAGE}/uEnv.txt ::/
 		mcopy -i ${WORKDIR}/${BOOT_IMG} -s ${DEPLOY_DIR_IMAGE}/boot.scr ::/
-		mcopy -i ${WORKDIR}/${BOOT_IMG} -s ${DEPLOY_DIR_IMAGE}/boot.cmd ::/
+		if [ -e ${DEPLOY_DIR_IMAGE}/boot.cmd ]; then
+			mcopy -i ${WORKDIR}/${BOOT_IMG} -s ${DEPLOY_DIR_IMAGE}/boot.cmd ::/
+		fi
 	fi
 
 	# Burn Boot Partition
