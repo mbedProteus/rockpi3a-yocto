@@ -1,0 +1,18 @@
+version: "2.1"
+services:
+    rockpi3-build:
+        build:
+            context: ./docker
+            dockerfile: Dockerfile
+        container_name: rockpi3-build
+        volumes:
+            - "$SRC_DIR:/src"
+            - "/home:/home"
+            - "$HOME_DIR:/home/$USER"
+            - "$DOWNLOAD_DIR:/src/downloads"
+            - "/etc/passwd:/etc/passwd"
+            - "/etc/shadow:/etc/shadow"
+            - "/etc/group:/etc/group"
+        env_file: ./.env
+        entrypoint: /src/docker-entrypoint.sh
+        user: 1000:1000
