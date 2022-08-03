@@ -15,6 +15,10 @@ Build yocto for Rock 3A Board
 - Set up environment for docker build
     ```bash
     ./create_docker_env.sh -d /home/workspace/yocto_dl
+
+    repo init .
+    
+    repo sync
     ```
 
 - Build docker image and run it to make container to build yocto
