@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+	<remote fetch="https://git.openembedded.org" name="oe"/>
+	<remote fetch="https://git.yoctoproject.org" name="yocto"/>
+	<remote fetch="https://github.com/radxa" name="radxa"/>
+
+	<project name="meta-openembedded" path="sources/meta-openembedded" remote="oe" revision="52cee67833d1975a5bd52e4556c4cd312425a017"/>
+	<project name="poky" path="sources/poky" remote="yocto" revision="d695bd0d3dc66f2111a25c6922f617be2d991071"/>
+	<project name="meta-radxa" path="sources/meta-radxa" remote="radxa" revision="8129b3e55ca5e340658f212feb0e444a41d20de2"/>
+	<project name="meta-python2" path="sources/meta-python2" remote="oe" revision="b901080cf57d9a7f5476ab4d96e56c30db8170a8"/>
+</manifest>
