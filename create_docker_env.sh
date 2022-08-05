@@ -63,4 +63,5 @@ MACHINE=rockpi-3a
 TEMPLATECONF=../meta-rockpi3/conf
 USER="$(id -un)"
 GROUP="$(id -gn)"
+DISTRO=rockchip-x11
 EOF
